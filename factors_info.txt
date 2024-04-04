@@ -1,0 +1,21 @@
+factors
+
+US10Y_return: return ratio
+iv_call_to_atm: 25Delta - atm iv
+iv_put_to_atm: 25Delta - atm iv
+qqq_return: return ratio
+futures_rates: 永续合约费率
+futures_lob_depth: 期货LOB深度 amount of (long - short)
+
+
+all of this above are transformed to z-scorce normalization
+
+
+factor combination:
+equal-weighted sum
+
+
+
+
+附录:
+vwap = sum/cummulative_volume
