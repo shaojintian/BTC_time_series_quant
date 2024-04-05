@@ -6,9 +6,9 @@ iv_put_to_atm: 25Delta - atm iv
 qqq_return: return ratio
 futures_rates: 永续合约费率
 futures_lob_depth: 期货LOB深度 amount of (long - short)
+seasonality: utc+8 02-03 long #https://quantpedia.com/the-seasonality-of-bitcoin/
 
-
-all of this above are transformed to z-scorce normalization
+all of this above are transformed to z-score normalization
 
 
 factor combination:
