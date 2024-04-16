@@ -18,7 +18,7 @@ df.set_index('timestamp', inplace=True)
 df = df.apply(pd.to_numeric, errors='ignore')
 
 #save
-df.to_csv('btc_prices_15min')
+df.to_csv('btc_prices_15min.csv')
 
 # 画K线图
 #mpf.plot(df, type='candle', volume=True, style='binance')
