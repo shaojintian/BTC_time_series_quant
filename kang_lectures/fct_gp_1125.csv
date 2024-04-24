@@ -1,0 +1,4 @@
+,fitness,expression,depth,length
+alpha_1,0.009087358558934024,"div(open, high)",1,3
+alpha_95,0.004768387575266691,"div(low, close)",1,3
+alpha_51,0.004087358558934023,"abs(div(open, high))",2,4
