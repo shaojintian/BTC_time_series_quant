@@ -40,24 +40,53 @@ X_train, y_train = preprocess(file_path='./510050_15.pkl', frequency='15', n_day
 #"""Activate the Customized Functions"""
 
 func_1 = ['add', 'sub', 'mul', 'div', 'sqrt', 'log', 'abs', 'sin', 'cos', 'tan']
-func_2 = ['tanh', 'elu', 'TA_HT_TRENDLINE', 'TA_HT_DCPERIOD', 'TA_HT_DCPHASE', 'TA_SAR', 'TA_BOP', 'TA_AD', 'TA_OBV', 'TA_TRANGE'] # 算子
+#factors = ['tanh', 'elu', 'TA_HT_TRENDLINE', 'TA_HT_DCPERIOD', 'TA_HT_DCPHASE', 'TA_SAR', 'TA_BOP', 'TA_AD', 'TA_OBV', 'TA_TRANGE'] # 算子
 
 # 统计物理，信号与系统；# 把talib里面的，全部加进去；
 
+#gplearn.functions.functions.py 是修改过的源码
 from gplearn.functions import _function_map
 
-func_3 = list(_function_map.keys())
+cross_over_pattern = list(_function_map.keys())
 
-# user_func = func_1 + func_2
 
-def _my_metric(y, y_pred, w): # 打分机制--损失函数--作业2
-    return me.normalized_mutual_info_score(y, y_pred) # 互信息
+#sortino
+def _my_metric_sortino(y, y_pred, w): # 打分机制--损失函数--作业2
+    #return me.normalized_mutual_info_score(y, y_pred) # 互信息
+    # 计算超额回报
+    required_return = 0.05
+    excess_returns = y - y_pred - required_return
+    
+    # 只考虑下行波动性，即超额回报为负的部分
+    downside_returns = excess_returns[excess_returns < 0]
+    
+    # 计算下行波动性（下行标准差）
+    downside_std = np.sqrt(np.mean(downside_returns**2))
+    
+    # Sortino Ratio
+    sortino = np.mean(excess_returns) / (downside_std + 1e-10)  # 添加小常数以避免除以零
+    
+    return sortino
 
-user_metric = make_fitness(function=_my_metric, greater_is_better=True, wrap=False)
+def _my_metric_sharpe(y, y_pred, w): # 打分机制--损失函数--作业2
+     # 计算模型的平均性能（例如，平均准确度）
+    performance = np.mean(y - y_pred)
+    
+    # 计算模型性能的标准差
+    std_dev = np.std(y - y_pred)
+    
+    # 假设无风险利率为0，这里可以修改为实际的无风险利率
+    risk_free_rate = 0.05
+    
+    # 计算 Sharpe 比率
+    sharpe_ratio = performance / (std_dev + 1e-10)  # 添加一个小常数以避免除以零
+    
+    return sharpe_ratio
+
+
+user_metric = make_fitness(function=_my_metric_sharpe, greater_is_better=True, wrap=False)
 
 # 作业2：自己尝试着构建以sharpe为基准的metric
-
-# sin(relu(sigmoid(ta_cci(ta_adx(ta_dma(close, high,30))))))
 
 #1.2 
 ST_gplearn = SymbolicTransformer(population_size=500, # 一次生成因子的数量，
@@ -68,9 +97,9 @@ ST_gplearn = SymbolicTransformer(population_size=500, # 一次生成因子的数
                                  const_range=None, #(-1, 1),  # critical
                                  init_depth=(2, 5), # 第二重要的一个部位，控制我们公式的一个深度
                                 #  function_set=user_func, # 输入的算子群
-                                 function_set=func_3, # 输入的算子群
+                                 function_set=func_1, # 输入的杂交方式,群
                                 #  metric=user_metric, # 提升的点
-                                 metric='pearson', # pearson相关系数：思考的深度不够，自己想办法，把sharpe写进来，本节课的终极作业；spearman
+                                 metric=user_metric, # pearson相关系数：思考的深度不够，自己想办法，把sharpe写进来，本节课的终极作业；spearman
                                  parsimony_coefficient=0.005,
                                  p_crossover=0.4, 
                                  p_subtree_mutation=0.01,
@@ -101,7 +130,7 @@ best_programs_frame = best_programs_frame.sort_values(by='fitness', axis=0, asce
 best_programs_frame = best_programs_frame.drop_duplicates(subset=['expression'], keep='first')
 
 print(best_programs_frame)
-best_programs_frame.to_csv('fct_gp_1125.csv')
+best_programs_frame.to_csv(f'fct_gp_cross_overed_{time.time()}.csv')
 
 end_time = time.time()
 print('Time Cost:-----    ', end_time-start_time, 'S    --------------')
