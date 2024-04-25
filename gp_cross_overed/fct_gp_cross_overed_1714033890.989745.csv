@@ -1,0 +1,97 @@
+,fitness,expression,depth,length
+alpha_1,2.572406932126502,"sub(sub(low, close), close)",2,5
+alpha_5,2.572353788775218,"sub(low, add(high, low))",2,5
+alpha_6,2.572342464168449,"sub(sub(low, open), close)",2,5
+alpha_17,2.5718490216878136,"sub(sub(open, close), close)",2,5
+alpha_28,2.5717228912313934,"sub(sub(low, low), open)",2,5
+alpha_27,2.5717228912313934,"sub(low, add(low, open))",2,5
+alpha_26,2.5717228912313934,"sub(sub(low, open), low)",2,5
+alpha_37,2.570975251955873,"sub(close, add(open, low))",2,5
+alpha_39,2.5705226616387926,"sub(sub(high, low), open)",2,5
+alpha_40,2.5705041133321416,"sub(sub(close, low), low)",2,5
+alpha_10,2.5520014456514737,"sub(sub(low, add(open, high)), low)",3,7
+alpha_9,2.5520014456514737,"sub(sub(high, high), add(open, high))",2,7
+alpha_11,2.5519935111052314,"sub(sub(close, low), add(high, high))",2,7
+alpha_22,2.5517863039523454,"sub(sub(high, close), add(open, high))",2,7
+alpha_23,2.551783501670603,"sub(sub(close, high), add(low, close))",2,7
+alpha_24,2.551783501670603,"sub(sub(sub(open, open), high), low)",3,7
+alpha_29,2.5515456423290934,"sub(sub(open, add(close, low)), open)",3,7
+alpha_36,2.551212318683732,"sub(sub(close, low), add(close, low))",2,7
+alpha_35,2.551212318683732,"sub(sub(open, low), add(low, open))",2,7
+alpha_4,2.532404663662111,"sub(sub(open, sub(add(high, close), close)), close)",4,9
+alpha_2,2.532404663662111,"sub(sub(low, add(close, sub(high, open))), low)",4,9
+alpha_8,2.5321401434588378,"sub(open, add(add(high, open), add(close, high)))",3,9
+alpha_14,2.5319003784890333,"sub(high, sub(low, sub(sub(low, high), close)))",4,9
+alpha_15,2.5318729223979677,"add(sub(sub(open, add(low, open)), high), open)",4,9
+alpha_33,2.531266565219507,"sub(sub(close, volume), sub(add(close, low), volume))",3,9
+alpha_19,2.5118479409529053,"sub(sub(sub(add(low, low), add(low, open)), open), open)",4,11
+alpha_3,2.492404663662111,"sub(sub(low, high), add(add(sub(close, high), sub(high, open)), low))",4,13
+alpha_25,2.4717835016540204,"sub(sub(sub(close, volume), add(low, high)), add(sub(close, volume), sub(close, close)))",3,15
+alpha_16,2.451872574270694,"sub(sub(sub(add(sub(low, close), sub(close, open)), low), sub(open, low)), add(high, low))",5,17
+alpha_12,2.411987197967539,"add(sub(sub(high, sub(add(high, close), sub(low, open))), add(sub(add(close, close), low), low)), sub(open, open))",5,21
+alpha_7,2.3123055141175364,"sub(sub(sub(sub(low, open), add(volume, high)), add(sub(close, volume), add(close, close))), sub(sub(add(volume, high), add(close, volume)), sub(sub(close, high), sub(close, open))))",4,31
+alpha_13,2.3119771319444666,"sub(sub(add(add(open, close), sub(open, open)), sub(add(open, high), sub(low, open))), add(add(add(close, high), add(close, open)), add(add(high, open), add(open, close))))",4,31
+alpha_20,2.311846976996143,"sub(sub(sub(add(open, low), sub(open, volume)), sub(sub(volume, volume), sub(high, volume))), sub(add(add(volume, high), add(close, close)), add(sub(close, low), sub(volume, close))))",4,31
+alpha_21,2.3117863039765174,"sub(add(sub(add(close, volume), add(low, open)), add(sub(open, close), add(high, open))), add(sub(add(volume, open), add(high, low)), add(add(open, high), add(close, high))))",4,31
+alpha_32,2.3114206253964085,"sub(sub(sub(sub(high, low), sub(open, open)), sub(add(high, low), add(high, open))), sub(sub(add(high, open), sub(close, high)), sub(sub(volume, low), add(open, volume))))",4,31
+alpha_30,1.9915006741834351,"add(sub(add(sub(sub(close, high), add(open, volume)), add(sub(volume, volume), add(high, high))), add(sub(sub(close, open), sub(volume, low)), sub(add(low, open), sub(open, close)))), sub(sub(sub(sub(close, volume), add(close, open)), add(sub(high, open), sub(close, close))), sub(add(add(close, low), add(open, volume)), sub(add(open, volume), sub(close, volume)))))",5,63
+alpha_31,1.991493355872969,"add(add(sub(add(add(low, volume), add(close, high)), sub(add(open, open), sub(low, volume))), sub(sub(add(high, close), add(volume, low)), add(add(close, high), add(high, close)))), add(sub(add(sub(low, high), sub(open, high)), add(sub(low, close), add(open, close))), add(add(sub(volume, close), add(close, high)), sub(sub(high, low), sub(open, close)))))",5,63
+alpha_34,1.991224994586048,"sub(sub(add(sub(add(close, volume), add(volume, low)), sub(sub(volume, volume), sub(high, open))), sub(add(sub(close, open), sub(open, close)), add(sub(low, close), sub(volume, low)))), sub(sub(add(sub(low, close), add(volume, close)), sub(sub(close, low), sub(low, high))), sub(sub(sub(volume, open), add(open, close)), add(add(low, low), add(volume, low)))))",5,63
+alpha_38,1.9905681322035167,"add(add(sub(add(sub(open, high), sub(close, close)), add(add(low, low), add(volume, low))), sub(sub(sub(open, close), add(open, low)), sub(add(low, low), add(low, close)))), sub(add(add(add(low, high), sub(volume, low)), sub(sub(high, open), add(low, low))), add(sub(sub(low, high), add(low, high)), add(sub(close, open), add(low, low)))))",5,63
+alpha_41,1.9901914395318503,"sub(sub(add(sub(sub(volume, close), sub(low, high)), add(add(close, close), sub(open, low))), sub(add(add(low, volume), add(high, open)), sub(sub(close, high), sub(open, volume)))), sub(sub(sub(add(open, volume), sub(volume, high)), add(add(close, close), sub(volume, high))), sub(add(add(open, close), sub(close, volume)), add(add(low, low), sub(volume, high)))))",5,63
+alpha_42,0.9974333091508922,"sub(low, high)",1,3
+alpha_44,0.9574333091508922,"sub(sub(open, high), sub(open, low))",2,7
+alpha_45,0.9574333091508922,"sub(sub(volume, volume), sub(high, low))",2,7
+alpha_46,0.7990541482230745,"add(add(add(volume, close), sub(high, high)), sub(sub(open, high), add(high, volume)))",3,15
+alpha_97,0.768058979808491,"sub(low, volume)",1,3
+alpha_76,0.7480590283420782,"sub(low, add(close, volume))",2,5
+alpha_83,0.7480590282068244,"sub(close, add(low, volume))",2,5
+alpha_85,0.7480590282036605,"sub(high, add(close, volume))",2,5
+alpha_89,0.7480590040072349,"sub(close, add(volume, volume))",2,5
+alpha_57,0.7280590768788282,"sub(sub(close, close), add(high, volume))",2,7
+alpha_59,0.728059076811902,"sub(sub(open, open), add(open, volume))",2,7
+alpha_61,0.7280590768080375,"sub(sub(high, add(volume, high)), close)",3,7
+alpha_62,0.728059076804173,"sub(sub(open, volume), add(close, close))",2,7
+alpha_92,0.7280589799469088,"sub(sub(low, high), sub(volume, low))",2,7
+alpha_98,0.7280589798077903,"sub(add(open, close), add(high, volume))",2,7
+alpha_99,0.7280589798046266,"sub(sub(open, close), sub(volume, low))",2,7
+alpha_100,0.7280589798046266,"add(sub(low, add(close, volume)), open)",3,7
+alpha_72,0.7080590283459427,"sub(sub(add(sub(volume, open), low), volume), volume)",4,9
+alpha_73,0.7080590283452417,"sub(open, add(sub(open, sub(close, high)), volume))",4,9
+alpha_79,0.7080590282705868,"sub(add(open, sub(high, add(high, volume))), close)",4,9
+alpha_65,0.6880590767404109,"sub(sub(sub(high, add(high, low)), sub(volume, high)), high)",4,11
+alpha_82,0.6680590282075249,"sub(sub(sub(high, high), add(low, volume)), sub(sub(open, high), low))",3,13
+alpha_47,0.6480592709532695,"sub(sub(sub(high, high), add(close, volume)), add(add(open, high), add(low, open)))",3,15
+alpha_51,0.648059173879073,"sub(add(sub(open, close), sub(high, high)), add(add(volume, open), add(open, close)))",3,15
+alpha_53,0.6480591737399549,"sub(sub(add(volume, volume), add(volume, volume)), add(add(close, low), add(low, volume)))",3,15
+alpha_60,0.6480590768091967,"sub(sub(sub(volume, volume), add(volume, high)), sub(add(volume, low), sub(close, close)))",3,15
+alpha_64,0.64805907674884,"add(sub(sub(close, open), add(low, open)), sub(sub(high, open), sub(volume, low)))",3,15
+alpha_66,0.6480590766696201,"sub(sub(add(low, volume), add(close, low)), sub(add(low, volume), sub(high, volume)))",3,15
+alpha_67,0.6480590766689193,"sub(high, add(sub(close, sub(sub(open, low), sub(low, close))), add(volume, high)))",5,15
+alpha_75,0.6480590283432373,"sub(sub(add(open, low), add(volume, high)), add(sub(open, low), add(volume, low)))",3,15
+alpha_77,0.648059028307842,"sub(sub(sub(open, close), sub(open, low)), add(sub(volume, close), add(close, volume)))",3,15
+alpha_84,0.6480590282044693,"sub(sub(sub(open, volume), add(low, high)), sub(add(volume, low), add(high, close)))",3,15
+alpha_93,0.6480589798792814,"sub(sub(sub(close, close), add(volume, high)), sub(sub(high, high), add(close, low)))",3,15
+alpha_94,0.6480589798100004,"sub(sub(sub(low, close), sub(volume, low)), add(sub(open, close), sub(volume, close)))",3,15
+alpha_54,0.6280591253409226,"sub(sub(sub(high, close), volume), sub(add(add(low, low), add(high, high)), add(low, open)))",4,17
+alpha_74,0.5680590283435877,"sub(sub(add(sub(sub(low, volume), open), add(add(low, low), open)), add(low, add(sub(low, low), add(close, open)))), volume)",5,23
+alpha_71,0.5080590283651114,"sub(sub(sub(add(add(open, low), low), add(open, high)), volume), add(sub(add(add(volume, close), sub(volume, low)), sub(open, add(close, open))), sub(open, open)))",5,29
+alpha_90,0.5080590039360942,"sub(add(open, add(sub(high, add(volume, open)), sub(sub(high, volume), low))), sub(close, add(add(add(open, open), sub(volume, high)), sub(sub(close, volume), open))))",5,29
+alpha_48,0.488059270889507,"sub(sub(add(sub(high, volume), add(low, high)), add(add(high, open), add(high, high))), add(add(sub(open, open), add(low, open)), add(add(low, low), sub(open, close))))",4,31
+alpha_50,0.488059173879073,"sub(sub(add(add(volume, low), add(high, close)), sub(add(high, close), sub(low, open))), add(add(add(low, volume), add(volume, close)), add(sub(volume, volume), add(low, close))))",4,31
+alpha_52,0.4880591738114461,"sub(sub(sub(sub(high, open), add(open, low)), add(add(close, low), sub(volume, low))), add(sub(sub(high, volume), sub(close, volume)), sub(add(open, close), add(open, open))))",4,31
+alpha_55,0.4880591091889039,"sub(add(sub(sub(close, low), add(volume, volume)), sub(sub(open, close), add(high, open))), add(sub(add(low, open), sub(close, volume)), sub(add(high, high), sub(open, close))))",4,31
+alpha_56,0.4880590770841718,"sub(sub(sub(sub(volume, high), sub(high, open)), add(add(close, high), sub(low, low))), add(add(add(volume, volume), sub(close, low)), sub(sub(high, close), add(close, high))))",4,31
+alpha_69,0.48805904456610344,"sub(sub(sub(sub(close, close), sub(high, open)), add(add(volume, low), add(high, high))), sub(sub(add(volume, high), sub(open, high)), add(sub(high, volume), add(low, low))))",4,31
+alpha_78,0.488059028274379,"sub(sub(sub(sub(high, close), sub(volume, low)), add(sub(close, high), sub(low, close))), add(sub(sub(volume, volume), sub(low, close)), add(add(volume, high), sub(open, close))))",4,31
+alpha_81,0.4880590282386334,"add(sub(sub(close, sub(open, add(high, high))), high), sub(add(sub(add(low, close), close), sub(sub(open, close), add(volume, close))), sub(add(volume, add(low, low)), low)))",5,31
+alpha_49,0.1680591739471582,"add(add(sub(sub(add(volume, high), sub(volume, close)), sub(add(volume, close), sub(volume, high))), sub(sub(sub(high, open), sub(low, high)), add(sub(volume, low), add(close, high)))), add(sub(add(add(volume, volume), sub(open, high)), add(add(high, volume), add(volume, open))), sub(sub(sub(volume, close), add(volume, high)), sub(add(high, volume), sub(open, low)))))",5,63
+alpha_58,0.16805907683914578,"sub(sub(add(add(sub(close, close), add(close, open)), add(sub(high, open), add(open, volume))), add(add(sub(close, open), add(close, volume)), sub(add(high, volume), add(high, open)))), add(add(sub(add(low, open), sub(volume, close)), sub(sub(high, close), sub(high, close))), add(sub(sub(volume, low), sub(close, close)), add(add(volume, high), add(high, close)))))",5,63
+alpha_63,0.1680590767738015,"sub(add(add(add(sub(high, volume), sub(low, close)), sub(add(high, low), sub(open, high))), sub(sub(sub(open, high), add(open, volume)), sub(add(close, low), add(low, volume)))), add(add(sub(add(volume, low), sub(open, volume)), sub(add(high, high), sub(high, low))), sub(sub(add(high, low), sub(low, high)), sub(add(volume, close), sub(low, high)))))",5,63
+alpha_68,0.16805905255830822,"sub(sub(sub(add(sub(close, close), add(low, high)), sub(add(open, low), add(close, low))), sub(add(add(low, close), sub(volume, open)), sub(sub(low, open), add(low, close)))), add(add(add(add(close, volume), sub(high, high)), add(sub(high, volume), sub(volume, volume))), add(add(sub(volume, close), add(volume, volume)), add(sub(close, close), sub(high, open)))))",5,63
+alpha_70,0.1680590444281529,"sub(sub(add(sub(sub(low, volume), add(low, volume)), add(sub(low, high), sub(volume, close))), add(sub(add(close, open), sub(low, volume)), add(sub(low, volume), sub(open, open)))), add(add(add(add(low, close), sub(volume, close)), sub(add(volume, close), add(high, open))), add(add(sub(open, close), sub(close, high)), sub(sub(high, high), add(open, close)))))",5,63
+alpha_80,0.16805902825884267,"sub(sub(add(sub(sub(close, high), add(open, close)), add(sub(close, open), sub(low, close))), add(sub(sub(high, high), sub(close, volume)), add(sub(volume, low), sub(low, close)))), sub(add(add(add(open, volume), add(low, close)), sub(add(open, volume), sub(high, high))), add(add(sub(high, low), add(close, open)), sub(add(close, open), sub(high, high)))))",5,63
+alpha_86,0.16805902815195595,"add(add(sub(sub(add(high, high), add(close, volume)), add(add(volume, close), sub(volume, volume))), sub(add(add(open, volume), add(open, close)), add(sub(high, open), add(low, low)))), add(sub(sub(sub(open, open), add(volume, low)), sub(sub(volume, volume), sub(close, volume))), sub(add(add(high, open), sub(close, open)), add(add(low, low), add(volume, open)))))",5,63
+alpha_87,0.16805902813754314,"sub(add(sub(add(add(open, volume), sub(close, low)), sub(add(open, low), add(volume, volume))), sub(add(sub(low, high), sub(volume, volume)), sub(sub(low, high), sub(high, volume)))), add(add(add(add(volume, high), sub(low, low)), add(add(close, open), sub(volume, open))), add(sub(sub(volume, open), sub(close, volume)), add(sub(open, high), sub(open, high)))))",5,63
+alpha_88,0.16805902809828344,"add(add(sub(add(sub(volume, volume), add(high, volume)), add(add(high, high), sub(low, open))), sub(sub(sub(high, low), sub(high, high)), add(sub(volume, high), sub(volume, low)))), sub(add(add(add(volume, low), sub(high, volume)), sub(add(low, close), sub(volume, high))), add(add(sub(low, high), add(close, high)), add(add(low, low), add(close, close)))))",5,63
+alpha_91,0.16805899909902855,"add(sub(add(sub(add(low, high), add(open, volume)), sub(add(close, low), add(open, volume))), add(add(sub(low, high), sub(high, high)), add(add(low, volume), add(low, open)))), add(sub(sub(add(high, open), sub(low, close)), sub(add(open, low), add(low, open))), sub(sub(add(high, close), add(high, volume)), sub(sub(volume, open), sub(close, high)))))",5,63

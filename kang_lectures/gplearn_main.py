@@ -1,3 +1,4 @@
+import random
 import numpy as np
 import pandas as pd
 import time
@@ -47,14 +48,15 @@ func_1 = ['add', 'sub', 'mul', 'div', 'sqrt', 'log', 'abs', 'sin', 'cos', 'tan']
 #gplearn.functions.functions.py 是修改过的源码
 from gplearn.functions import _function_map
 
-user_func = list(_function_map.keys())[:15]
-
+user_func = func_1 + random.sample(list(_function_map.keys())[14:],10)
+print(user_func)
+#user_func = list(_function_map.keys())[:2]
 
 #sortino
 def _my_metric_sortino(y, y_pred, w): # 打分机制--损失函数--作业2
     #return me.normalized_mutual_info_score(y, y_pred) # 互信息
     # 计算超额回报
-    required_return = 0.05
+    required_return = 0.00
     excess_returns = y - y_pred - required_return
     
     # 只考虑下行波动性，即超额回报为负的部分
@@ -130,7 +132,7 @@ best_programs_frame = best_programs_frame.sort_values(by='fitness', axis=0, asce
 best_programs_frame = best_programs_frame.drop_duplicates(subset=['expression'], keep='first')
 
 print(best_programs_frame)
-best_programs_frame.to_csv(f'fct_gp_cross_overed_{time.time()}.csv')
+best_programs_frame.to_csv(f'../gp_cross_overed/fct_gp_cross_overed_{time.time()}.csv')
 
 end_time = time.time()
 print('Time Cost:-----    ', end_time-start_time, 'S    --------------')

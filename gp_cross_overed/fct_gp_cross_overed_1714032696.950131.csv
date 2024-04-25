@@ -1,0 +1,101 @@
+,fitness,expression,depth,length
+alpha_1,30.408006546124806,neg(log(log(volume))),3,4
+alpha_2,4.790234396348632,"min(add(inv(close), sub(high, high)), neg(sqrt(close)))",3,10
+alpha_3,2.9410542991855135,neg(cos(inv(open))),3,4
+alpha_4,2.7428887795655883,"sub(TA_SAR(close, volume), min(high, low))",2,7
+alpha_6,2.602353788775218,neg(high),1,2
+alpha_7,2.601900378489033,neg(close),1,2
+alpha_8,2.601722891231393,neg(open),1,2
+alpha_5,2.5823538149151952,"neg(max(open, high))",2,4
+alpha_9,2.455771540214411,"elu(sqrt(sqrt(TA_SAR(TA_SAR(close, volume), sqrt(high)))))",5,9
+alpha_10,2.3638305271759883,"TA_SAR(neg(close), sqrt(volume))",2,5
+alpha_11,2.149511191034507,neg(abs(log(high))),3,4
+alpha_12,1.9922192737856241,"log(TA_SAR(tan(close), div(TA_HT_TRENDLINE(open), cos(low))))",4,9
+alpha_13,1.9620341691744225,log(sin(inv(low))),3,4
+alpha_14,1.812124170741917,"sub(TA_HT_TRENDLINE(sin(volume)), sub(add(close, close), TA_HT_DCPHASE(low)))",3,10
+alpha_16,1.7950348848815016,sin(neg(low)),2,3
+alpha_15,1.7759683223158504,"neg(abs(mul(sqrt(high), abs(close))))",4,7
+alpha_18,1.759014195713341,inv(neg(low)),2,3
+alpha_17,1.5997981969066861,"sub(div(neg(elu(elu(low))), sqrt(add(min(volume, low), mul(volume, open)))), abs(neg(sin(add(low, low)))))",5,20
+alpha_19,1.4659554899030245,"log(TA_SAR(log(TA_HT_DCPERIOD(tan(volume))), TA_SAR(TA_HT_TRENDLINE(cos(high)), max(inv(high), max(volume, low)))))",5,16
+alpha_20,1.3679966840920461,"mul(log(neg(min(tanh(volume), sqrt(high)))), add(max(close, abs(sub(low, open))), elu(add(sqrt(volume), max(close, low)))))",5,22
+alpha_21,1.326577661081936,"sub(TA_SAR(volume, open), min(open, low))",2,7
+alpha_22,1.2121159905335792,"TA_SAR(sub(TA_HT_TRENDLINE(low), min(volume, open)), sqrt(log(volume)))",3,10
+alpha_23,1.1935977351766134,"add(sin(high), neg(open))",2,5
+alpha_25,1.130911589207508,elu(inv(open)),2,3
+alpha_24,1.087708653469987,"sub(inv(add(volume, close)), abs(TA_HT_TRENDLINE(open)))",3,8
+alpha_27,1.0652694641730451,tan(neg(log(high))),3,4
+alpha_28,1.0639344824482935,TA_HT_TRENDLINE(log(inv(close))),3,4
+alpha_30,1.0088551946268318,"elu(neg(mul(low, low)))",3,5
+alpha_31,0.9912283631687557,"min(cos(close), sub(high, low))",2,6
+alpha_26,0.9598901339495081,"TA_SAR(mul(neg(log(add(close, close))), log(max(add(close, close), max(low, low)))), sin(TA_HT_DCPHASE(neg(cos(high)))))",5,20
+alpha_32,0.8988236090649019,"sin(neg(min(max(high, volume), TA_HT_TRENDLINE(high))))",4,8
+alpha_34,0.8879384400169171,elu(cos(low)),2,3
+alpha_29,0.8806914712346599,"min(min(min(abs(open), log(volume)), TA_SAR(sub(close, volume), div(volume, open))), sin(TA_HT_DCPERIOD(cos(high))))",4,18
+alpha_33,0.8708131898618235,log(sin(inv(elu(close)))),4,5
+alpha_36,0.8441569652681927,"neg(TA_SAR(low, low))",2,4
+alpha_39,0.8201302842275697,neg(elu(high)),2,3
+alpha_35,0.8188017912449788,"min(sqrt(abs(low)), neg(TA_SAR(close, low)))",3,8
+alpha_38,0.8177782133735297,"div(sub(close, volume), high)",2,5
+alpha_41,0.778059028274451,neg(volume),1,2
+alpha_37,0.7495007912565695,"add(log(div(TA_SAR(volume, high), neg(close))), tanh(tanh(TA_HT_DCPERIOD(open))))",4,12
+alpha_43,0.7480590058479736,"sub(TA_HT_TRENDLINE(low), abs(volume))",2,5
+alpha_42,0.738059028274451,"min(min(volume, low), neg(volume))",2,6
+alpha_45,0.7276665786230575,sin(log(cos(TA_HT_TRENDLINE(open)))),4,5
+alpha_44,0.698641855037792,"neg(TA_HT_TRENDLINE(max(div(open, high), TA_SAR(high, volume))))",4,9
+alpha_46,0.6919307690846249,log(inv(inv(TA_HT_TRENDLINE(volume)))),4,5
+alpha_49,0.5895274958604936,log(neg(abs(sin(low)))),4,5
+alpha_47,0.5851809978751428,"sub(elu(sub(TA_SAR(volume, high), abs(close))), log(abs(abs(low))))",4,12
+alpha_48,0.5558278233323247,"log(div(sin(open), sqrt(div(inv(open), TA_SAR(volume, high)))))",5,11
+alpha_52,0.5451946312987802,"sub(TA_HT_DCPHASE(volume), elu(close))",2,5
+alpha_53,0.5294829456535268,log(TA_HT_DCPERIOD(elu(TA_HT_DCPERIOD(high)))),4,5
+alpha_55,0.5254097071764418,log(tanh(neg(high))),3,4
+alpha_50,0.5252825417698522,"sin(add(inv(elu(cos(low))), sin(TA_HT_DCPERIOD(cos(close)))))",5,10
+alpha_54,0.5214075210853668,log(sqrt(TA_HT_DCPERIOD(TA_HT_DCPERIOD(high)))),4,5
+alpha_57,0.5203421269096768,cos(open),1,2
+alpha_59,0.5156527586047854,cos(low),1,2
+alpha_58,0.4983356282095593,TA_HT_TRENDLINE(abs(tanh(low))),3,4
+alpha_40,0.46805902887934364,"add(min(neg(volume), mul(cos(sin(open)), abs(min(high, volume)))), div(div(TA_HT_DCPERIOD(tan(high)), inv(log(close))), add(min(tanh(volume), mul(volume, high)), sub(mul(close, high), TA_HT_DCPHASE(open)))))",5,33
+alpha_51,0.4413720214144521,"min(abs(max(max(open, low), TA_HT_TRENDLINE(high))), sub(TA_HT_DCPHASE(add(high, volume)), min(elu(open), low)))",4,17
+alpha_61,0.43725691986336757,log(tan(sin(volume))),3,4
+alpha_62,0.436393239311875,tanh(TA_HT_TRENDLINE(sin(open))),3,4
+alpha_56,0.4138328211178204,"TA_HT_DCPERIOD(TA_SAR(sub(div(high, open), TA_HT_TRENDLINE(open)), TA_SAR(mul(high, high), sin(low))))",4,14
+alpha_60,0.411802408636998,"sin(add(TA_HT_DCPERIOD(log(TA_HT_DCPHASE(high))), min(abs(volume), log(neg(volume)))))",5,12
+alpha_66,0.40200364228232216,elu(elu(neg(close))),3,4
+alpha_64,0.3810505541675313,"mul(TA_SAR(open, close), sub(low, close))",2,7
+alpha_65,0.3810031550910682,"min(volume, log(cos(TA_SAR(close, volume))))",4,7
+alpha_63,0.364386286816605,"sin(TA_SAR(inv(TA_HT_TRENDLINE(TA_HT_DCPHASE(open))), cos(sin(TA_HT_DCPHASE(volume)))))",5,10
+alpha_69,0.3608536487771329,log(elu(low)),2,3
+alpha_70,0.36059933329336924,log(TA_HT_DCPHASE(high)),2,3
+alpha_67,0.34048186834242844,"log(TA_HT_DCPHASE(max(TA_HT_TRENDLINE(volume), tan(open))))",4,7
+alpha_72,0.29549104788010694,elu(tanh(neg(volume))),3,4
+alpha_76,0.27678305848499496,tanh(TA_HT_TRENDLINE(tan(high))),3,4
+alpha_77,0.2517890315335619,sin(tan(close)),2,3
+alpha_75,0.24743517957138927,"TA_HT_TRENDLINE(min(sub(open, volume), TA_HT_DCPHASE(high)))",3,7
+alpha_78,0.23097719221161,"sin(tan(min(low, open)))",3,5
+alpha_71,0.22326761634961528,"add(add(sin(cos(low)), tan(cos(low))), elu(div(open, tanh(close))))",4,13
+alpha_80,0.2114946094417707,"sin(add(open, open))",2,4
+alpha_81,0.20931206586285714,log(tanh(TA_HT_TRENDLINE(high))),3,4
+alpha_83,0.18292531667996875,"TA_HT_TRENDLINE(cos(mul(high, close)))",3,5
+alpha_73,0.18026061216183062,"cos(add(tan(max(inv(high), sqrt(open))), abs(mul(abs(open), TA_SAR(volume, open)))))",5,15
+alpha_85,0.1411384880419822,"sin(tan(TA_SAR(volume, close)))",3,5
+alpha_84,0.13068182302419085,"min(TA_HT_DCPERIOD(log(high)), cos(div(open, volume)))",3,8
+alpha_90,0.12289801819957351,"TA_SAR(cos(volume), neg(open))",2,5
+alpha_88,0.11793076488014811,"inv(elu(inv(TA_SAR(high, high))))",4,6
+alpha_86,0.11662000576476728,"tanh(elu(TA_HT_TRENDLINE(neg(max(open, high)))))",5,7
+alpha_68,0.10025062185584321,"min(sub(tan(tan(cos(close))), TA_SAR(sqrt(mul(volume, low)), inv(sub(close, high)))), div(cos(sqrt(tanh(low))), TA_SAR(min(abs(low), TA_SAR(high, open)), TA_HT_TRENDLINE(TA_SAR(volume, close)))))",5,31
+alpha_93,0.09568068102754912,"TA_HT_TRENDLINE(mul(elu(open), elu(open)))",3,6
+alpha_89,0.09487554030011137,"TA_HT_TRENDLINE(TA_SAR(div(open, open), sub(close, volume)))",3,8
+alpha_96,0.08711244326451201,"elu(TA_HT_TRENDLINE(sub(neg(open), close)))",4,6
+alpha_100,0.08520758272467924,"elu(sub(low, close))",2,4
+alpha_99,0.06562448533896809,"elu(mul(inv(low), sin(volume)))",3,6
+alpha_94,0.06471402577829541,"sin(cos(min(mul(open, high), mul(high, volume))))",4,9
+alpha_95,0.06416883931460363,"sub(div(inv(high), tan(open)), sqrt(abs(high)))",3,9
+alpha_91,0.05589659811940283,"TA_HT_TRENDLINE(max(tan(cos(open)), max(inv(low), TA_SAR(high, close))))",4,11
+alpha_82,0.05033359971543222,"min(TA_HT_DCPERIOD(sqrt(max(TA_HT_TRENDLINE(low), elu(open)))), max(TA_HT_DCPERIOD(neg(min(high, close))), log(mul(tan(low), high))))",5,19
+alpha_92,0.04578044020643997,"sub(tanh(div(volume, open)), sub(TA_SAR(open, close), sin(high)))",3,11
+alpha_97,0.03827559564047581,"elu(neg(min(elu(add(volume, low)), add(high, high))))",5,10
+alpha_74,0.005469241918871881,"min(mul(TA_HT_DCPHASE(elu(elu(high))), TA_HT_TRENDLINE(tanh(div(close, volume)))), mul(sub(log(min(close, volume)), TA_HT_DCPERIOD(TA_SAR(high, high))), mul(tan(log(open)), max(div(open, volume), TA_SAR(high, low)))))",5,32
+alpha_79,-0.01449433460538413,"sub(sub(TA_HT_TRENDLINE(mul(sqrt(open), TA_SAR(volume, open))), min(sqrt(sin(low)), sqrt(cos(close)))), TA_SAR(neg(tanh(add(volume, open))), cos(sub(max(open, close), abs(volume)))))",5,29
+alpha_87,-0.023866034828042254,"mul(max(div(elu(inv(volume)), high), neg(inv(high))), mul(div(mul(abs(close), inv(open)), log(sqrt(low))), high))",5,21
+alpha_98,-0.08409798219697098,"min(inv(sub(tanh(elu(open)), sub(tanh(close), TA_HT_DCPHASE(volume)))), cos(sub(min(elu(high), TA_HT_DCPHASE(open)), neg(elu(low)))))",5,21
