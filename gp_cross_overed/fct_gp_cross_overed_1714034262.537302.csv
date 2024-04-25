@@ -1,0 +1,99 @@
+,fitness,expression,depth,length
+alpha_2,6.48910809826488,"ta_tema_21(ta_adx_25(low, volume, high))",2,5
+alpha_1,6.449109624290898,"ta_tema_21(ta_adx_25(sin(high), sub(close, volume), ts_range_20(volume)))",3,9
+alpha_3,2.814683836012269,"sub(abs(div(ta_trix_21(div(open, open)), abs(ta_trix_21(volume)))), sqrt(cos(log(mul(low, high)))))",5,16
+alpha_4,2.564629817011135,"log(sub(ta_trix_21(ta_adx_25(open, volume, high)), ta_trix_21(cos(high))))",4,10
+alpha_5,2.5613166437076695,"sub(sub(close, open), abs(open))",2,6
+alpha_6,2.3983435380727376,"div(sub(cos(open), sqrt(close)), sqrt(open))",3,8
+alpha_7,2.3083780777789626,"sub(ta_adx_25(sin(abs(volume)), sub(mul(volume, high), ta_trix_21(high)), ts_range_20(sin(open))), open)",4,15
+alpha_8,2.2560290731700734,log(cos(cos(cos(close)))),4,5
+alpha_9,2.150865546712321,"add(log(ta_adx_25(volume, high, volume)), sub(ta_tema_21(close), mul(low, close)))",3,12
+alpha_11,1.8754771884355126,"sub(sin(tan(volume)), abs(sqrt(high)))",3,7
+alpha_12,1.8663431821118102,"sub(cos(add(volume, close)), open)",3,6
+alpha_10,1.8510730700292617,"log(div(add(sin(ta_tema_21(high)), ta_trix_21(add(close, low))), div(div(add(low, open), log(high)), ta_adx_25(tan(open), cos(low), ta_adx_25(low, open, low)))))",5,26
+alpha_13,1.7722731364524504,"sub(add(sin(ts_range_20(low)), log(sin(open))), open)",4,9
+alpha_14,1.382262796205593,"add(sub(sub(ta_rsi_6(volume), div(low, high)), add(mul(high, open), ta_rsi_6(close))), ts_range_20(div(sqrt(open), add(high, close))))",4,21
+alpha_16,1.2898799216032573,"tan(sin(sub(abs(ts_range_20(close)), low)))",5,7
+alpha_15,1.2180152274290206,"ts_range_20(add(ts_range_20(ta_adx_25(abs(volume), ta_rsi_6(open), ta_tema_21(close))), ta_adx_25(add(ts_range_20(close), ta_adx_25(low, high, volume)), ta_trix_21(sin(close)), close)))",5,22
+alpha_17,1.0104180070389792,"log(log(sqrt(ta_adx_25(sin(open), div(close, low), mul(close, close)))))",5,12
+alpha_18,0.9636647623333084,"tan(sin(add(log(volume), ta_adx_25(volume, open, volume))))",4,9
+alpha_19,0.8941171886437235,"sub(mul(sin(sqrt(volume)), sin(ta_adx_25(close, low, volume))), abs(sin(tan(volume))))",4,14
+alpha_20,0.8924966092698821,ta_tema_21(cos(high)),2,3
+alpha_22,0.8594960283069313,log(log(open)),2,3
+alpha_23,0.8589224802878379,log(log(close)),2,3
+alpha_21,0.8395598492449403,"sin(mul(open, log(log(open))))",4,6
+alpha_25,0.7696605642659777,log(ta_tema_21(ts_range_20(low))),3,4
+alpha_24,0.7676714201092183,"div(log(sin(ta_rsi_6(volume))), sqrt(ta_tema_21(div(volume, volume))))",4,10
+alpha_28,0.74845422180877,"mul(cos(open), high)",2,4
+alpha_31,0.7408295558000767,log(cos(volume)),2,3
+alpha_33,0.7393135308231019,log(ta_trix_21(low)),2,3
+alpha_26,0.7380589799300679,"sub(sub(low, volume), cos(volume))",2,6
+alpha_35,0.7377788882681926,log(ta_trix_21(high)),2,3
+alpha_34,0.719295146576281,"log(ta_trix_21(add(close, volume)))",3,5
+alpha_29,0.7162468663184387,"log(sqrt(ts_range_20(sub(close, low))))",4,6
+alpha_27,0.7080589748153208,"sub(ta_tema_21(sqrt(log(ta_trix_21(open)))), sub(volume, open))",5,9
+alpha_37,0.6685824518071514,"ta_rsi_6(ta_adx_25(low, volume, open))",2,5
+alpha_30,0.6439773730859317,"sub(div(cos(high), ta_adx_25(open, volume, open)), add(ta_trix_21(low), log(high)))",3,13
+alpha_39,0.6250864956422643,"sin(sub(close, high))",2,4
+alpha_40,0.614133009431664,"mul(cos(open), ta_tema_21(high))",2,5
+alpha_38,0.5801180367126302,"ta_tema_21(sqrt(div(ta_trix_21(ta_tema_21(volume)), abs(add(open, low)))))",5,10
+alpha_41,0.5790241192417047,"ta_tema_21(sin(sub(ta_tema_21(open), low)))",4,6
+alpha_43,0.552213488943781,"log(ta_adx_25(close, high, low))",2,5
+alpha_42,0.5372309543149627,"sub(ts_range_20(cos(div(high, close))), log(abs(abs(low))))",4,10
+alpha_44,0.5319556711815014,tan(cos(high)),2,3
+alpha_45,0.5203421269096768,cos(open),1,2
+alpha_47,0.5156527586047854,cos(low),1,2
+alpha_46,0.506645736533011,sin(cos(high)),2,3
+alpha_49,0.4970031299726817,sin(cos(low)),2,3
+alpha_50,0.4819822708790829,sin(ts_range_20(ta_trix_21(close))),3,4
+alpha_48,0.47557090410209407,"mul(cos(low), div(open, high))",2,6
+alpha_54,0.43558770498982946,log(ta_rsi_6(ta_trix_21(ta_tema_21(volume)))),4,5
+alpha_51,0.4339429018290288,"log(ta_adx_25(ts_range_20(open), ta_rsi_6(high), ta_rsi_6(volume)))",3,8
+alpha_56,0.3839037900392465,"log(ta_rsi_6(cos(mul(open, volume))))",4,6
+alpha_59,0.375680109078941,sin(ta_tema_21(ts_range_20(open))),3,4
+alpha_57,0.34098401161210157,"ts_range_20(ts_range_20(sqrt(div(sqrt(high), mul(open, low)))))",5,9
+alpha_53,0.3391545999164003,"log(add(ta_rsi_6(high), ta_adx_25(ta_rsi_6(abs(high)), ta_tema_21(low), div(ta_tema_21(close), cos(open)))))",5,15
+alpha_64,0.33867121212242846,ts_range_20(ta_tema_21(close)),2,3
+alpha_55,0.3369051649397595,"log(mul(tan(add(volume, close)), ta_adx_25(open, ta_adx_25(close, open, low), volume)))",4,13
+alpha_61,0.3307955725994587,"sin(cos(abs(log(sub(volume, low)))))",5,7
+alpha_65,0.3130447411470812,ts_range_20(ta_trix_21(log(sin(close)))),4,5
+alpha_67,0.30398198548775573,tan(tan(cos(low))),3,4
+alpha_62,0.29477924433320957,"add(sqrt(ta_adx_25(open, volume, low)), log(sin(close)))",3,9
+alpha_52,0.2840648823602774,"div(ts_range_20(ta_adx_25(ts_range_20(high), div(high, high), mul(high, high))), sqrt(ta_adx_25(add(low, low), log(open), ta_adx_25(close, low, low))))",4,22
+alpha_63,0.2835431090145727,"mul(sub(cos(volume), open), ta_adx_25(low, log(open), volume))",3,10
+alpha_60,0.2812163513552566,"log(add(ta_trix_21(log(abs(close))), add(log(ta_rsi_6(high)), cos(ta_trix_21(open)))))",5,13
+alpha_68,0.26092444965216177,"sub(abs(ts_range_20(low)), sqrt(div(close, high)))",3,8
+alpha_71,0.25050102049440526,sin(tan(open)),2,3
+alpha_72,0.22900215671323937,log(log(ta_tema_21(ts_range_20(volume)))),4,5
+alpha_75,0.2262473526036107,ts_range_20(ts_range_20(low)),2,3
+alpha_76,0.2179872081605952,ts_range_20(ts_range_20(close)),2,3
+alpha_69,0.21489300468884034,"sub(cos(abs(low)), mul(log(high), ta_rsi_6(open)))",3,9
+alpha_70,0.20473899427280307,"div(sqrt(open), log(sin(sub(volume, low))))",4,8
+alpha_78,0.18438483113532617,ta_tema_21(ts_range_20(tan(abs(open)))),4,5
+alpha_77,0.17517798006226182,"tan(ts_range_20(abs(ta_adx_25(open, volume, high))))",4,7
+alpha_81,0.17385946741362468,ts_range_20(sqrt(log(volume))),3,4
+alpha_80,0.16734132326944584,"mul(cos(open), ts_range_20(close))",2,5
+alpha_82,0.16385946741362467,ts_range_20(sqrt(log(abs(volume)))),4,5
+alpha_73,0.1586321388956609,"log(abs(mul(cos(mul(volume, volume)), tan(mul(low, open)))))",5,11
+alpha_84,0.1582003279197472,ta_tema_21(sqrt(ta_trix_21(close))),3,4
+alpha_79,0.15571393997334093,"ta_adx_25(ta_trix_21(low), tan(tan(close)), close)",3,7
+alpha_86,0.1313483532731099,ta_tema_21(sqrt(ts_range_20(open))),3,4
+alpha_74,0.12233279704506539,"ts_range_20(mul(sin(cos(ta_trix_21(high))), add(cos(cos(low)), sin(div(low, low)))))",5,14
+alpha_66,0.11642344499729756,"ta_adx_25(log(mul(add(volume, low), cos(close))), ta_trix_21(add(div(high, open), add(volume, volume))), div(cos(div(volume, volume)), ta_trix_21(ta_trix_21(close))))",4,24
+alpha_83,0.10292032665978032,"log(div(cos(low), ta_rsi_6(div(low, add(low, high)))))",5,10
+alpha_94,0.09645588754787154,"ts_range_20(div(high, low))",2,4
+alpha_92,0.09052296195983188,ta_tema_21(sin(ts_range_20(sqrt(high)))),4,5
+alpha_90,0.08378941200675807,"ta_tema_21(add(ts_range_20(high), ta_rsi_6(volume)))",3,6
+alpha_96,0.08336491659501061,ta_tema_21(sin(low)),2,3
+alpha_97,0.07667318460173418,ts_range_20(log(close)),2,3
+alpha_85,0.0733158513600449,"add(ta_trix_21(div(close, open)), add(cos(high), ta_rsi_6(high)))",3,10
+alpha_87,0.06307528036172896,"tan(sin(ta_rsi_6(sub(div(low, high), sub(high, volume)))))",5,10
+alpha_93,0.060464917077502,"add(sin(add(close, low)), ta_rsi_6(cos(high)))",3,8
+alpha_95,0.05492933921221789,"ts_range_20(ta_rsi_6(div(abs(low), mul(volume, volume))))",4,8
+alpha_58,0.03910585562771335,"ta_adx_25(ta_adx_25(mul(log(abs(volume)), ta_adx_25(cos(high), sub(close, volume), mul(close, volume))), ta_tema_21(tan(cos(high))), ts_range_20(sqrt(sqrt(high)))), tan(add(log(div(close, close)), abs(ts_range_20(low)))), sin(abs(tan(div(volume, high)))))",5,38
+alpha_89,0.036685728644944154,"sin(ts_range_20(add(sub(sqrt(low), cos(close)), ta_trix_21(mul(volume, close)))))",5,12
+alpha_99,0.019482080416704378,"ta_tema_21(ta_adx_25(log(volume), ta_rsi_6(open), ts_range_20(open)))",3,8
+alpha_88,-0.00039177968712025835,"sub(ta_rsi_6(sub(cos(high), ta_tema_21(high))), add(ts_range_20(add(close, low)), ts_range_20(add(high, close))))",4,16
+alpha_100,-0.005738425201241459,"div(low, log(mul(ts_range_20(ta_trix_21(close)), sin(cos(volume)))))",5,10
+alpha_91,-0.048452460771208655,"ts_range_20(add(ta_adx_25(ta_trix_21(ta_tema_21(high)), add(ta_tema_21(low), sin(high)), ta_tema_21(add(low, open))), log(sin(cos(high)))))",5,19
+alpha_98,-0.0799975898177083,"ts_range_20(sub(ta_trix_21(tan(ta_adx_25(volume, close, volume))), ta_adx_25(sqrt(log(volume)), ts_range_20(cos(open)), log(ts_range_20(high)))))",5,18

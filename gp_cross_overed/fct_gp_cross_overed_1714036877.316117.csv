@@ -1,0 +1,99 @@
+,fitness,expression,depth,length
+alpha_1,9.25921013993695,"log(ts_prod_17(ta_adx_25(low, volume, low)))",3,6
+alpha_2,6.227855401399727,"add(ta_lr_intercept_20(tan(ta_adx_25(abs(low), volume, ta_natr_25(high, low, volume)))), div(log(tan(ts_prod_17(volume))), add(sqrt(high), cos(cos(volume)))))",5,22
+alpha_3,4.494548668783668,"ts_wma_8(ts_wma_8(ts_wma_8(ts_prod_17(sub(close, high)))))",5,7
+alpha_4,2.7944965646785,log(ta_lr_intercept_20(ts_wma_8(ts_prod_17(volume)))),4,5
+alpha_5,2.5613166437076695,"sub(sub(close, open), abs(open))",2,6
+alpha_6,2.3983435380727376,"div(sub(cos(open), sqrt(close)), sqrt(open))",3,8
+alpha_8,2.2560290731700734,log(cos(cos(cos(close)))),4,5
+alpha_7,2.2233391728777354,"log(ta_natr_25(ta_adx_25(open, volume, high), ta_lr_intercept_20(volume), ts_prod_17(open)))",3,10
+alpha_9,1.8754771884355126,"sub(sin(tan(volume)), abs(sqrt(high)))",3,7
+alpha_10,1.8663431821118102,"sub(cos(add(volume, close)), open)",3,6
+alpha_11,1.7054219265782526,"add(log(ta_natr_25(volume, high, volume)), sub(ts_prod_17(close), mul(low, close)))",3,12
+alpha_14,1.5263683254477112,"sub(mul(sin(sqrt(volume)), sin(ta_natr_25(close, low, volume))), abs(sin(tan(volume))))",4,14
+alpha_13,1.446361426792861,"sub(ta_natr_25(sin(abs(volume)), sub(mul(volume, high), ts_wma_8(high)), ta_adx_25(sin(open), open, ts_prod_17(low))), abs(cos(ta_natr_25(close, low, close))))",4,23
+alpha_12,1.406597006334513,"add(sub(sub(ta_lr_intercept_20(volume), div(low, high)), add(mul(high, open), ta_lr_intercept_20(close))), ta_adx_25(div(sqrt(open), add(high, close)), sqrt(sqrt(close)), ta_lr_intercept_20(ta_adx_25(open, open, high))))",4,29
+alpha_15,1.1759894909531168,"log(log(sqrt(ta_natr_25(sin(open), div(close, low), mul(close, close)))))",5,12
+alpha_16,1.072407406212914,"log(mul(tan(add(volume, close)), ta_natr_25(open, ta_natr_25(close, open, low), volume)))",4,13
+alpha_18,0.9785638465594992,"sin(ts_prod_17(ta_adx_25(open, high, close)))",3,6
+alpha_17,0.9654709947652321,"div(log(sin(ta_lr_intercept_20(volume))), sqrt(ts_prod_17(div(volume, volume))))",4,10
+alpha_19,0.9293357673326711,"tan(sin(add(log(volume), ta_natr_25(volume, open, volume))))",4,9
+alpha_21,0.9076975343279021,ta_lr_intercept_20(cos(low)),2,3
+alpha_22,0.8784975107358849,sin(ts_wma_8(cos(close))),3,4
+alpha_24,0.8594960283069313,log(log(open)),2,3
+alpha_25,0.8589224802878379,log(log(close)),2,3
+alpha_23,0.8395598492449403,"sin(mul(open, log(log(open))))",4,6
+alpha_26,0.8378199455240941,sin(ts_prod_17(ts_wma_8(high))),3,4
+alpha_29,0.74845422180877,"mul(cos(open), high)",2,4
+alpha_31,0.7408295558000767,log(cos(volume)),2,3
+alpha_27,0.7380589799300679,"sub(sub(low, volume), cos(volume))",2,6
+alpha_28,0.708058979899016,"sub(ts_prod_17(sqrt(log(ts_wma_8(open)))), sub(volume, open))",5,9
+alpha_32,0.6988027072554641,"log(ts_wma_8(add(close, volume)))",3,5
+alpha_30,0.6911257570280448,"add(sin(add(close, low)), ta_lr_intercept_20(cos(high)))",3,8
+alpha_20,0.6824392973420639,"log(div(add(sin(ts_prod_17(high)), ts_wma_8(add(close, low))), div(div(add(low, open), log(high)), ta_natr_25(tan(open), cos(low), ta_natr_25(low, open, low)))))",5,26
+alpha_34,0.6475473843966053,"sub(cos(abs(low)), mul(log(high), ta_lr_intercept_20(open)))",3,9
+alpha_36,0.6250864956422643,"sin(sub(close, high))",2,4
+alpha_33,0.5959065257916385,"div(sub(cos(low), sub(high, high)), ta_adx_25(add(volume, open), ts_wma_8(close), cos(close)))",3,15
+alpha_39,0.5803816023967084,"log(ta_natr_25(close, high, low))",2,5
+alpha_35,0.5497580861522121,"ta_adx_25(sqrt(abs(low)), log(div(low, open)), sin(div(volume, open)))",3,12
+alpha_41,0.547252596960524,"sin(ta_lr_intercept_20(ta_natr_25(open, close, close)))",3,6
+alpha_45,0.5319556711815014,tan(cos(high)),2,3
+alpha_40,0.5298693486720223,"ts_prod_17(sin(sqrt(ta_adx_25(sub(volume, volume), sqrt(high), open))))",5,10
+alpha_46,0.5203421269096768,cos(open),1,2
+alpha_49,0.5156527586047854,cos(low),1,2
+alpha_48,0.506645736533011,sin(cos(high)),2,3
+alpha_44,0.5024831999994086,"log(ta_lr_intercept_20(cos(mul(open, volume))))",4,6
+alpha_51,0.4970031299726817,sin(cos(low)),2,3
+alpha_50,0.47557090410209407,"mul(cos(low), div(open, high))",2,6
+alpha_38,0.4719061381760917,"sub(abs(div(ts_wma_8(div(open, open)), abs(ts_wma_8(volume)))), sqrt(cos(log(mul(low, high)))))",5,16
+alpha_37,0.4133384964070499,"mul(log(sin(ts_wma_8(ts_wma_8(high)))), sin(ta_adx_25(ta_lr_intercept_20(ts_wma_8(low)), ta_adx_25(sin(low), sub(close, close), high), cos(ta_natr_25(low, close, volume)))))",5,23
+alpha_52,0.3950021512863795,log(ts_wma_8(high)),2,3
+alpha_54,0.393549604170497,log(ts_wma_8(low)),2,3
+alpha_42,0.3864746012477738,"sub(ta_lr_intercept_20(sub(cos(high), ts_prod_17(high))), add(ta_adx_25(add(close, low), ta_adx_25(open, high, close), sub(volume, volume)), sin(high)))",4,21
+alpha_60,0.35460074683326503,ts_prod_17(cos(high)),2,3
+alpha_56,0.35156506999625187,"mul(log(ta_lr_intercept_20(volume)), sin(ts_wma_8(low)))",3,7
+alpha_47,0.34755868518298677,"ta_adx_25(ta_natr_25(sub(log(volume), ta_natr_25(open, low, volume)), ta_adx_25(close, high, low), close), open, div(open, cos(high)))",4,19
+alpha_61,0.3315715766891781,"ts_prod_17(ta_adx_25(volume, open, open))",2,5
+alpha_57,0.3307955725994587,"sin(cos(abs(log(sub(volume, low)))))",5,7
+alpha_58,0.3146431327040751,"ta_adx_25(log(close), ts_wma_8(open), div(volume, low))",2,8
+alpha_59,0.3101917136139037,"ta_adx_25(sin(open), div(close, open), cos(close))",2,8
+alpha_66,0.30398198548775573,tan(tan(cos(low))),3,4
+alpha_63,0.30332607573782533,"ts_wma_8(ta_natr_25(open, close, open))",2,5
+alpha_67,0.2782326897197733,"ta_lr_intercept_20(ta_natr_25(low, high, close))",2,5
+alpha_69,0.2675695380145608,"ts_wma_8(ta_natr_25(low, open, open))",2,5
+alpha_62,0.25386727396040154,"sub(sin(sin(ta_lr_intercept_20(cos(close)))), ts_prod_17(div(open, low)))",5,10
+alpha_74,0.25050102049440526,sin(tan(open)),2,3
+alpha_75,0.25020871686597523,sin(ts_prod_17(close)),2,3
+alpha_71,0.24596464905319165,sin(ts_prod_17(ts_wma_8(cos(sqrt(volume))))),5,6
+alpha_68,0.22635425748629187,"log(sub(ts_wma_8(ta_natr_25(open, volume, high)), ts_wma_8(cos(high))))",4,10
+alpha_78,0.21792466192712528,ta_lr_intercept_20(ts_wma_8(tan(ts_prod_17(low)))),4,5
+alpha_43,0.21031275734395372,"div(log(add(add(ta_lr_intercept_20(low), abs(close)), add(mul(low, volume), log(close)))), mul(ta_natr_25(tan(cos(volume)), ta_lr_intercept_20(ta_adx_25(low, high, close)), sub(ta_lr_intercept_20(low), div(high, volume))), abs(div(cos(volume), abs(low)))))",5,36
+alpha_73,0.20473899427280307,"div(sqrt(open), log(sin(sub(volume, low))))",4,8
+alpha_64,0.19692757514665996,"log(add(ta_lr_intercept_20(high), ta_natr_25(ta_lr_intercept_20(abs(high)), ts_prod_17(low), div(ts_prod_17(close), cos(open)))))",5,15
+alpha_65,0.18401562420131126,"ts_prod_17(ts_wma_8(ta_adx_25(add(volume, open), ts_wma_8(add(high, open)), add(sqrt(high), mul(volume, high)))))",5,16
+alpha_72,0.17513152399269272,"ts_wma_8(ta_natr_25(low, add(ts_wma_8(low), abs(high)), add(log(volume), low)))",4,12
+alpha_79,0.16967981593045967,"ta_natr_25(sqrt(low), high, div(high, ts_prod_17(open)))",3,8
+alpha_77,0.1586321388956609,"log(abs(mul(cos(mul(volume, volume)), tan(mul(low, open)))))",5,11
+alpha_82,0.1510775468211597,"mul(cos(open), ts_prod_17(high))",2,5
+alpha_81,0.1292477571410789,"log(sqrt(ta_adx_25(sub(close, low), tan(low), abs(low))))",4,10
+alpha_76,0.09382796906076629,"ts_prod_17(sub(ts_prod_17(abs(ts_wma_8(close))), div(sin(ta_natr_25(close, low, volume)), mul(abs(open), div(high, close)))))",5,18
+alpha_89,0.08175286279310524,ta_lr_intercept_20(ts_prod_17(ts_prod_17(sqrt(low)))),4,5
+alpha_97,0.07956619343429937,ta_lr_intercept_20(sin(high)),2,3
+alpha_99,0.0774831474599454,ta_lr_intercept_20(sin(close)),2,3
+alpha_80,0.06941991826477997,"sub(ta_adx_25(log(cos(close)), ta_lr_intercept_20(ts_wma_8(close)), ts_prod_17(ta_natr_25(close, low, volume))), ts_prod_17(ts_prod_17(low)))",4,16
+alpha_96,0.04478081291479308,"div(ts_wma_8(sqrt(high)), ts_prod_17(tan(close)))",3,7
+alpha_86,0.043828326486624575,"ts_prod_17(sqrt(div(ts_wma_8(ts_prod_17(volume)), abs(add(open, low)))))",5,10
+alpha_84,0.04337300402326813,"mul(sub(log(open), ta_adx_25(close, volume, volume)), sin(ta_adx_25(close, close, low)))",3,13
+alpha_87,0.0422016846929508,"ts_wma_8(ta_adx_25(ts_prod_17(close), ta_natr_25(volume, high, volume), sqrt(low)))",3,10
+alpha_93,0.040684753198986054,"ts_prod_17(ts_prod_17(sqrt(mul(high, mul(close, open)))))",5,8
+alpha_94,0.038571297347589795,"ta_natr_25(sub(open, high), log(low), log(volume))",2,8
+alpha_92,0.03392977104245738,"ta_natr_25(sub(abs(open), open), log(volume), abs(volume))",3,9
+alpha_90,0.01927387555874789,"ta_adx_25(ta_adx_25(low, close, open), tan(close), ta_natr_25(volume, open, high))",2,11
+alpha_98,0.01881786479496432,"ta_lr_intercept_20(ta_adx_25(high, sub(high, close), add(high, high)))",3,9
+alpha_100,0.014658475110737104,"ts_wma_8(add(abs(ts_prod_17(low)), tan(sub(close, close))))",4,9
+alpha_95,-0.004977592837954167,"ts_prod_17(ta_adx_25(tan(abs(open)), cos(sqrt(high)), sin(mul(high, open))))",4,12
+alpha_85,-0.04030413320335979,"ta_adx_25(open, cos(tan(add(open, open))), ta_natr_25(ta_natr_25(ta_adx_25(close, volume, close), open, tan(low)), close, tan(sqrt(open))))",4,20
+alpha_88,-0.04578043309548102,"sub(tan(sin(div(sub(close, high), sqrt(volume)))), log(div(abs(cos(high)), ts_prod_17(add(close, open)))))",5,18
+alpha_91,-0.07303203617776477,"ts_prod_17(ta_natr_25(ta_lr_intercept_20(sub(ts_wma_8(high), div(high, open))), high, div(close, add(div(high, low), ta_natr_25(close, open, close)))))",5,20
+alpha_70,-0.11427221355541967,"mul(sqrt(ta_natr_25(ta_adx_25(ts_wma_8(volume), abs(volume), log(close)), log(cos(open)), abs(cos(volume)))), add(log(ta_lr_intercept_20(add(close, low))), ta_natr_25(ta_natr_25(ts_wma_8(close), ta_adx_25(open, high, close), sub(low, volume)), sub(sqrt(volume), abs(high)), sub(cos(open), sqrt(low)))))",5,43
+alpha_83,-0.176796891512046,"ta_adx_25(ta_adx_25(sqrt(div(sqrt(high), mul(open, low))), ts_wma_8(sin(ts_wma_8(open))), sqrt(log(high))), log(sqrt(tan(abs(high)))), sub(ta_natr_25(low, low, log(add(volume, open))), sin(sub(mul(volume, high), ta_lr_intercept_20(volume)))))",5,36
