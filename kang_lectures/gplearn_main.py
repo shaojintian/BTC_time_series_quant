@@ -47,7 +47,7 @@ func_1 = ['add', 'sub', 'mul', 'div', 'sqrt', 'log', 'abs', 'sin', 'cos', 'tan']
 #gplearn.functions.functions.py 是修改过的源码
 from gplearn.functions import _function_map
 
-cross_over_pattern = list(_function_map.keys())
+user_func = list(_function_map.keys())[:15]
 
 
 #sortino
@@ -96,11 +96,11 @@ ST_gplearn = SymbolicTransformer(population_size=500, # 一次生成因子的数
                                  tournament_size=80,
                                  const_range=None, #(-1, 1),  # critical
                                  init_depth=(2, 5), # 第二重要的一个部位，控制我们公式的一个深度
-                                #  function_set=user_func, # 输入的算子群
-                                 function_set=func_1, # 输入的杂交方式,群
+                                #function_set=user_func, # 输入的算子群
+                                 function_set=user_func, # 输入的杂交方式,群
                                 #  metric=user_metric, # 提升的点
                                  metric=user_metric, # pearson相关系数：思考的深度不够，自己想办法，把sharpe写进来，本节课的终极作业；spearman
-                                 parsimony_coefficient=0.005,
+                                 parsimony_coefficient=0.01,
                                  p_crossover=0.4, 
                                  p_subtree_mutation=0.01,
                                  p_hoist_mutation=0.01,

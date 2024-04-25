@@ -1067,6 +1067,7 @@ def _ta_natr_25(x1, x2, x3):
     x = np.nan_to_num(talib.NATR(x1, x2, x3, timeperiod=t))
     return norm(x)
 
+
 # 已加入因子：_ts_cov_20，_ts_cov_40, _ts_corr_20, _ts_corr_40, _ts_day_min_10, _ts_day_min_20, _ts_day_min_40
 # _ts_day_max_10, _ts_day_max_20, _ts_day_max_40, _ts_sma_8, _ts_sma_21, _ts_sma_55
 # _ts_wma_8, _ts_wma_21, _ts_wma_55, _ts_lag_3, _ts_lag_8, _ts_lag_17
