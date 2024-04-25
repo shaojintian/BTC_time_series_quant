@@ -49,7 +49,7 @@ func_1 = ['add', 'sub', 'mul', 'div', 'sqrt', 'log', 'abs']
 #gplearn.functions.functions.py 是修改过的源码
 from gplearn.functions import _function_map
 
-user_func = func_1 + random.sample(list(_function_map.keys())[14:],0)
+user_func = func_1 + random.sample(list(_function_map.keys())[14:],5)
 print(user_func)
 #user_func = list(_function_map.keys())[:2]
 
