@@ -8,6 +8,7 @@ import pandas as pd
 import numpy as np
 import math
 from sklearn.linear_model import LinearRegression
+import line_profiler
 
 
 '''
@@ -19,10 +20,10 @@ from sklearn.linear_model import LinearRegression
 def generate_etime_close_data_divd_time(bgn_date, end_date, index_code, frequency): # 2022-11-25 edition last edited on 2023-01-17
     # 读取数据
     # read_file_path = 'D:/9_quant_course/' + index_code + '_' + frequency + '.xlsx'
-    read_file_path = 'D:/9_quant_course/' + index_code + '_' + frequency + '.xlsx'
+    read_file_path = './' + index_code + '_' + frequency + '.xlsx'
     kbars = pd.read_excel(read_file_path)
     kbars['tdate'] = pd.to_datetime(kbars['etime']).dt.date # 这一段需要优化
-    dt = pd.to_datetime(kbars['etime'], format='%Y-%m-%d %H:%M:%S.%f')
+    dt = pd.to_datetime(kbars['etime'], format='%Y-%m-%d %H:%M:%S')
     kbars['etime'] = pd.Series([pd.Timestamp(x).round('s').to_pydatetime() for x in dt])
     kbars['label'] = '-1'
     
@@ -50,6 +51,7 @@ def generate_etime_close_data_divd_time(bgn_date, end_date, index_code, frequenc
 单因子分析框架
 ========================================================================================================================
 '''
+@line_profiler.profile
 def backtest(original_data, index_code, frequency, n_days):
     '''
     INPUT：
@@ -140,6 +142,7 @@ def backtest(original_data, index_code, frequency, n_days):
     # 这里出现的问题是y_train_hat全部都是正数，这明显不对，明天用其他的代码试试
 
     '''2：测算持仓净值（训练集）'''
+    print('''2：测算持仓净值（训练集）''')
     
     # 测算周期的起始日期和结束日期
     begin_date_train = pd.to_datetime(str(etime_train[0])).strftime('%Y-%m-%d %H:%M:%S')
@@ -704,7 +707,8 @@ def backtest(original_data, index_code, frequency, n_days):
     indicators_frame.loc['样本外', '盈亏比'] = gain_loss_ratio
     
     import matplotlib.pyplot as plt
-    
+
+    print(ret_frame_test.head())
     plt.figure(figsize=(8,6))
     plt.plot(ret_frame_test['持仓净值（累计）'], 'b-', label='Test curve')
     plt.legend()

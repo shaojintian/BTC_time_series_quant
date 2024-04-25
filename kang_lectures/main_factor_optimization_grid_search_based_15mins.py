@@ -31,11 +31,11 @@ import pandas as pd # 1.4.2  python 3.8.3
 
 def generate_etime_close_data_divd_time(bgn_date, end_date, index_code, frequency): # 2022-11-25 edition last edited on 2023-01-17
     # 读取数据
-    read_file_path = 'D:/9_quant_course/' + index_code + '_' + frequency + '.xlsx'
+    read_file_path = './' + index_code + '_' + frequency + '.xlsx'
     
     kbars = pd.read_excel(read_file_path)
     kbars['tdate'] = pd.to_datetime(kbars['etime']).dt.date # 这一段需要优化
-    dt = pd.to_datetime(kbars['etime'], format='%Y-%m-%d %H:%M:%S.%f')
+    dt = pd.to_datetime(kbars['etime'], format='%Y-%m-%d %H:%M:%S')
     kbars['etime'] = pd.Series([pd.Timestamp(x).round('s').to_pydatetime() for x in dt])
     kbars['label'] = '-1'
     
@@ -67,6 +67,7 @@ def iter_func(params):
     freq, col_name, fct_series, data = params
     # 表格构建，这里的data就是行情数据
     data['fct'] = fct_series.values # data包含的：etime，tdate，close, fct_value
+    print('================================================starting backtest data')
     ind_frame = backtest(original_data=data, index_code='510050', frequency=freq, n_days = 1) # n_days非常重要
     print('frequency: {}\nfct_name: {}\n'.format(freq, col_name))
     print(ind_frame)
@@ -91,29 +92,33 @@ if __name__ == '__main__':
     start_time = time.time()
     final_frame = pd.DataFrame()
     # file_path = 'D:/9_quant_course/commodities_data/rb_storage_1111.csv' # 因子的路径
-    file_path = 'E:/Factor_Work_K/12_fct_reinforcement/fct_compare_0702.csv'
+    file_path = './fct_compare_0702.csv'
     
     # 因子数据和文件路径
     warnings.filterwarnings('ignore')
-    job_num = 8  # 设置并行核数 设置为-1，将会调用电脑所有线程
-    freq_val = 'd'
+    job_num = 8  # 设置并行核数 设置为-1，将会调用电脑所有process
+    freq_val = '15'
     
-    # 引入行情数据，注意日期
+    # 1.1行情数据，注意日期
+    print('================================================================start 整合 market data' )
     original_frame = generate_etime_close_data_divd_time(bgn_date='2005-02-23', end_date='2022-11-30', index_code='510050', frequency=freq_val)  # 生成原始数据
-    print(original_frame, '==============original frame')
+    print('================================1.1行情数据整合ended',original_frame.head())
     #print(original_frame.shape) 
-    fct_file = pd.read_csv(file_path, index_col=0)  # 读取因子表格
-    print(len(fct_file), '============length of fct file')
-
+   
+    # 1.2因子数据 
     inputs = []
+    fct_file = pd.read_csv(file_path, index_col=0)  # 读取因子表格
+    print('==================================1.2因子数据整合starting',len(fct_file))
     for fct_name in fct_file.columns:
-        print(fct_name)
+        #print(fct_name)
         inputs.append((freq_val, fct_name, fct_file[fct_name], original_frame)) # 15， factor_name，fct_value，etime，tdate，close
         # freqval factorname factorvalue etime tdate close
         # 注意这里fct_file的columns就需要全部都是fct，不能出现timestamp和return
-    #print(inputs)
+    print('===================================1.2因子数据 ended')
+
     
-    # 周期频率，因子名称，对应的因子数据，etime，tdate，close
+    # 1.3 整合因子和行情，开始回测 
+    print('================================1.3整合因子和行情，开始回测')
     with ProcessPoolExecutor(max_workers=job_num) as executor:
         results = {executor.submit(iter_func, param): param for param in inputs} # 通过这种方式，把我们的行情数据和因子数据进行一一对应
         for r in as_completed(results):
@@ -122,7 +127,8 @@ if __name__ == '__main__':
             except Exception as exception:
                 print(exception)
     
-    final_frame.to_csv('E:/Factor_Work_K/12_fct_reinforcement/result_reinforcement_0702.csv', encoding='utf-8-sig') # change
+    final_frame.to_csv('./result_reinforcement_0702.csv', encoding='utf-8-sig') # change
+    print('==========1.3回测任务完成')
     end_time = time.time()
-    print('Time cost:====', end_time - start_time)
+    print(f'========Time cost:{end_time - start_time}s==========')
     

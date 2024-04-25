@@ -1,0 +1,24 @@
+,fitness,expression,depth,length
+alpha_100,1.020005687661056,ta_lr_angle_10(volume),1,2
+alpha_7,1.0300000059777308,ta_lr_angle_10(ta_lr_angle_10(volume)),2,3
+alpha_33,1.0300000400709008,log(ta_lr_angle_10(volume)),2,3
+alpha_48,1.0300008185258187,ta_lr_angle_10(ta_lr_angle_10(high)),2,3
+alpha_49,1.0300011469411765,ta_lr_angle_10(ta_lr_angle_10(low)),2,3
+alpha_54,1.0300011645447553,ta_lr_angle_10(ta_lr_angle_10(open)),2,3
+alpha_70,1.0300048278003628,ta_lr_angle_10(log(low)),2,3
+alpha_1,1.0399999999078284,ta_lr_angle_10(log(ta_lr_angle_10(high))),3,4
+alpha_5,1.0400000006224128,ta_lr_angle_10(ta_lr_angle_10(ta_tsf_10(close))),3,4
+alpha_6,1.0400000030964023,ta_lr_angle_10(ta_lr_angle_10(ta_tsf_10(low))),3,4
+alpha_18,1.04000002993736,"ta_lr_angle_10(div(high, open))",2,4
+alpha_36,1.0400001279774957,ta_lr_angle_10(abs(ta_lr_angle_10(high))),3,4
+alpha_39,1.0400003592782499,ta_lr_angle_10(ta_lr_angle_10(log(open))),3,4
+alpha_40,1.0400004247898664,ta_lr_angle_10(ta_tsf_10(ta_lr_angle_10(high))),3,4
+alpha_41,1.0400004755160994,ta_lr_angle_10(ta_lr_angle_10(log(low))),3,4
+alpha_50,1.0400011469411765,ta_lr_angle_10(ta_lr_angle_10(abs(low))),3,4
+alpha_58,1.0400033286114634,ta_lr_angle_10(abs(sqrt(volume))),3,4
+alpha_4,1.0500000003752694,"ta_lr_angle_10(ta_dx_14(high, open, low))",2,5
+alpha_37,1.0500001731911068,ta_lr_angle_10(abs(ta_lr_angle_10(ta_lr_angle_10(low)))),4,5
+alpha_38,1.0500002444070857,"ta_lr_angle_10(div(ta_lr_angle_10(high), open))",3,5
+alpha_55,1.0500012218688295,"ta_lr_angle_10(log(add(volume, volume)))",3,5
+alpha_57,1.0500020909433874,"ta_lr_angle_10(ta_lr_angle_10(div(high, open)))",3,5
+alpha_12,1.0600000127613958,"ta_lr_angle_10(ta_tsf_10(add(volume, abs(volume))))",4,6
