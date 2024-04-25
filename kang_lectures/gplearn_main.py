@@ -1,3 +1,4 @@
+import inspect
 import random
 import numpy as np
 import pandas as pd
@@ -40,7 +41,7 @@ X_train, y_train = preprocess(file_path='./510050_15.pkl', frequency='15', n_day
 
 #"""Activate the Customized Functions"""
 
-func_1 = ['add', 'sub', 'mul', 'div', 'sqrt', 'log', 'abs', 'sin', 'cos', 'tan']
+func_1 = ['add', 'sub', 'mul', 'div', 'sqrt', 'log', 'abs']
 #factors = ['tanh', 'elu', 'TA_HT_TRENDLINE', 'TA_HT_DCPERIOD', 'TA_HT_DCPHASE', 'TA_SAR', 'TA_BOP', 'TA_AD', 'TA_OBV', 'TA_TRANGE'] # 算子
 
 # 统计物理，信号与系统；# 把talib里面的，全部加进去；
@@ -48,7 +49,7 @@ func_1 = ['add', 'sub', 'mul', 'div', 'sqrt', 'log', 'abs', 'sin', 'cos', 'tan']
 #gplearn.functions.functions.py 是修改过的源码
 from gplearn.functions import _function_map
 
-user_func = func_1 + random.sample(list(_function_map.keys())[14:],5)
+user_func = func_1 + random.sample(list(_function_map.keys())[14:],0)
 print(user_func)
 #user_func = list(_function_map.keys())[:2]
 
@@ -78,15 +79,23 @@ def _my_metric_sharpe(y, y_pred, w): # 打分机制--损失函数--作业2
     std_dev = np.std(y - y_pred)
     
     # 假设无风险利率为0，这里可以修改为实际的无风险利率
-    risk_free_rate = 0.05
+    risk_free_rate = 0.00
     
     # 计算 Sharpe 比率
-    sharpe_ratio = performance / (std_dev + 1e-10)  # 添加一个小常数以避免除以零
+    sharpe_ratio = (performance - risk_free_rate) / (std_dev + 1e-10)  # 添加一个小常数以避免除以零
     
     return sharpe_ratio
 
+def _my_metric_rmse_loss(y_true, y_pred,w):
+    std_dev = np.std(y_true - y_pred)
+    return np.sqrt(np.mean((y_true - y_pred) ** 2))/(std_dev + 1e-10)
 
-user_metric = make_fitness(function=_my_metric_sharpe, greater_is_better=True, wrap=False)
+def _my_metric_mae_loss(y_true, y_pred,w):
+    return np.mean(np.abs(y_true - y_pred))
+
+_greater_is_better = False
+#user_metric = make_fitness(function=_my_metric_rmse_loss, greater_is_better=False, wrap=False)
+user_metric = make_fitness(function=_my_metric_rmse_loss, greater_is_better=_greater_is_better, wrap=False)
 
 # 作业2：自己尝试着构建以sharpe为基准的metric
 
@@ -128,15 +137,18 @@ for bp in best_programs:
     best_programs_dict[factor_name] = {'fitness': bp.fitness_, 'expression': str(bp), 'depth': bp.depth_, 'length': bp.length_}
 
 best_programs_frame = pd.DataFrame(best_programs_dict).T
-best_programs_frame = best_programs_frame.sort_values(by='fitness', axis=0, ascending=False)
+_ascending = False if _greater_is_better is True else True
+best_programs_frame = best_programs_frame.sort_values(by='fitness', axis=0, ascending=_ascending)
 best_programs_frame = best_programs_frame.drop_duplicates(subset=['expression'], keep='first')
 
 print(best_programs_frame)
-best_programs_frame.to_csv(f'../gp_cross_overed/fct_gp_cross_overed_{time.time()}.csv')
+best_programs_frame.to_csv(f'../gp_cross_overed/rmse_{time.time()}.csv')
 
 end_time = time.time()
 print('Time Cost:-----    ', end_time-start_time, 'S    --------------')
 
 # TA_HT_DCPERIOD(TA_OBV(TA_HT_DCPERIOD(tanh(low)), high))
+
+
 
 

@@ -58,7 +58,7 @@ import pickle
 
 # 一、读取数据并根据talib生成各项基础因子
 start_time = time.time()
-file_path = 'D:/9_quant_course/510050.SH_15.pkl' # pickle feather
+file_path = './510050.SH_15.pkl' # pickle feather
 data_15mins_50etf = pd.read_pickle(file_path).reset_index() # 读取源文件
 data_15mins_50etf['timestamp'] = pd.to_datetime(data_15mins_50etf['timestamp'])
 data_15mins_50etf = data_15mins_50etf.sort_values(by='timestamp', ascending=True)
@@ -210,8 +210,8 @@ model.fit(X_train, y_train)
 # y_test_hat = model.predict(X_test)
 
 # 0-1：模型保存和模型调用
-joblib.dump(model, 'D:/9_quant_course/LRmodel.pkl') # 序列化保存模型的一个工具
-estimator = joblib.load('D:/9_quant_course/LRmodel.pkl') # 经过check，保存和调用模型没问题
+joblib.dump(model, './LRmodel.pkl') # 序列化保存模型的一个工具
+estimator = joblib.load('./LRmodel.pkl') # 经过check，保存和调用模型没问题
 # y_test_hat = estimator.predict(X_test)
 
 
@@ -303,7 +303,7 @@ model_lgb = lgb.train(best_parameters,  # 设置最优超参数，注意：首�
                     verbose_eval=20, 
                     early_stopping_rounds=100)
 # ===================上述为模型训练过程====================================================================
-model_lgb.save_model('D:/9_quant_course/lgb_model.txt')
+model_lgb.save_model('./lgb_model.txt')
 y_hat_lgb = model_lgb.predict(X_test, num_iteration=model_lgb.best_iteration) # 评估模型：MSE
 
 
