@@ -713,8 +713,8 @@ def backtest(original_data, index_code, frequency, n_days):
     plt.plot(ret_frame_test['持仓净值（累计）'], 'b-', label='Test curve')
     plt.legend()
     plt.grid()
-    plt.xlabel('Factor')
-    plt.ylabel('Return')
+    plt.xlabel('回测时间窗口')
+    plt.ylabel('累计净值')
     plt.show()
 
     

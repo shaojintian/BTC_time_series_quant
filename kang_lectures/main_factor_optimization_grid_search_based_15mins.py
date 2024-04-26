@@ -128,7 +128,7 @@ if __name__ == '__main__':
                 print(exception)
     
     final_frame.to_csv('./result_reinforcement_0702.csv', encoding='utf-8-sig') # change
-    print('==========1.3回测任务完成')
+    print('==========1.3回测任务完成并将结果写入csv ')
     end_time = time.time()
     print(f'========Time cost:{end_time - start_time}s==========')
     
