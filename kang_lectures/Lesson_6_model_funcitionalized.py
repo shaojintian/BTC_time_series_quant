@@ -69,7 +69,7 @@ def norm(x):
 
 def generate_etime_close_data_divd_time(bgn_date, end_date, index_code, frequency): # 2022-11-25 edition last edited on 2023-01-17
     # 读取数据
-    read_file_path = 'D:/9_quant_course/' + index_code + '_' + frequency + '.xlsx'
+    read_file_path = './' + index_code + '_' + frequency + '.xlsx'
     kbars = pd.read_excel(read_file_path)
     kbars['tdate'] = pd.to_datetime(kbars['etime']).dt.date # 这一段需要优化
     dt = pd.to_datetime(kbars['etime'], format='%Y-%m-%d %H:%M:%S.%f')
@@ -91,10 +91,13 @@ def generate_etime_close_data_divd_time(bgn_date, end_date, index_code, frequenc
 
     return etime_close_data
 
-
+'''
+========================================start mock trading========================================================
+================================================================================================
+'''
 # 一、读取数据并根据talib生成各项基础因子
 start_time = time.time()
-file_path = 'D:/9_quant_course/510050.SH_15.pkl'
+file_path = './510050.SH_15.pkl'
 data_15mins_50etf = pd.read_pickle(file_path).reset_index() # 读取源文件
 data_15mins_50etf['timestamp'] = pd.to_datetime(data_15mins_50etf['timestamp'])
 data_15mins_50etf = data_15mins_50etf.sort_values(by='timestamp', ascending=True) # 1.6s polars
@@ -205,7 +208,7 @@ fct_equal.index = fct_value.index
 
 
 # 2、载入因子，观察其corr
-fct_file = pd.read_csv('D:/9_quant_course/factor_base_0419.csv').set_index('timestamp')
+fct_file = pd.read_csv('./factor_base_0419.csv').set_index('timestamp')
 fct_corr = fct_file.corr()
 fct_file['return'] = (data_15mins_50etf['close'].shift(-1)/data_15mins_50etf['close'] - 1).values # 注意这里需要加上.values
 fct_file = fct_file.replace([np.nan], 0.0)
@@ -214,7 +217,7 @@ fct_corr_05 = factor_selection_by_correlation(fct_file, column_list, 0.3) #
 # print(fct_corr_05)
 
 # 2、单因子成绩排序
-fct_result = pd.read_csv('D:/9_quant_course/result_base_0621.csv').set_index('年份')
+fct_result = pd.read_csv('./result_base_0621.csv').set_index('年份')
 fct_result = fct_result.loc['样本外', :]
 fct_result = fct_result.sort_values(by='夏普比率', ascending=False)
 fct_selected = fct_result[fct_result['夏普比率'] > 0.2]

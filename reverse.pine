@@ -1,0 +1,57 @@
+// fmz@02d630e9bfd65c29df8755ead1d72477
+// This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © QuantVue
+
+//@version=5
+strategy("reverse all coins", overlay = true)
+
+///////////
+//inputs//
+var g1 = 'ATR Options'
+atrLen = input.int(14, 'ATR Length', group = g1)
+extMult = input.float(3.0, 'Extension Multiple', group = g1)
+
+var g2 = 'Moving Average Options'
+maLen = input.int(21, 'Moving Average', inline = '1', group = g2)
+maType = input.string('EMA', ' ', options = ['EMA', 'SMA'], inline = '1', group = g2)
+maWidth = input.int(4, 'MA Thickness', minval = 1, maxval = 5, step = 1, group = g2)
+
+var g3 = 'Color Options'
+upCol = input.color(color.green, 'Low > MA Color', inline = '2', group = g3)
+dnCol = input.color(color.yellow, 'Low <= MA Color', inline = '2', group = g3)
+extUpCol = input.color(color.red, 'Extended Up', inline = '3', group = g3)
+extDnCol = input.color(color.aqua, 'Extended Down', inline = '3', group = g3)
+
+/////////////////
+//calculations//
+atr = ta.atr(atrLen)
+ma = ta.ema(close,maLen) 
+
+lowVma  =   low - ma 
+highVma =   ma - high
+
+rsiPos =    lowVma / atr
+rsiNeg =    highVma / atr
+
+///////////
+//colors//
+posCol = rsiPos >= extMult ? extUpCol : rsiPos >= 0 ? upCol : rsiPos < 0 and rsiNeg < 0 ? upCol : color.new(color.white,100)
+negCol = rsiNeg >= extMult ? extDnCol : rsiNeg > 0 ? dnCol: rsiPos < 0 and rsiNeg < 0 ? dnCol : color.new(color.white,100)
+
+/////////
+//plot//
+plot(ma, 'EMA', low > ma ? posCol : negCol, linewidth = maWidth)
+
+///////////
+//alerts//
+alertcondition(rsiPos >= extMult, 'Extended Up', '{{ticker}} is extended up from it\'s moving average')
+alertcondition(rsiNeg >= extMult, 'Extended Down', '{{ticker}} is extended down from it\'s moving average')
+
+returns = (close - open)/open
+
+condition = 
+
+if condition >0
+    strategy.entry('long',strategy.long,qty=strategy.equity/close, comment='1')
+else if condition <0
+    strategy.entry('short',strategy.short,qty=strategy.equity/close,comment='0')
